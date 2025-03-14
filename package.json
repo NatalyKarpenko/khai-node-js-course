@@ -1,14 +1,22 @@
 {
   "name": "khai-node-js-course",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node src/index.js",
+    "migration:generate": "drizzle-kit generate:pg",
+    "migration:push": "drizzle-kit push"
   },
-  "author": "",
+  "author": "natalia karpenko",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.21.1"
+    "drizzle-orm": "^0.40.0",
+    "express": "^4.21.1",
+    "pg": "^8.14.0"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.30.5"
   }
 }
